@@ -40,4 +40,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function cards(){
+        return $this->belongsToMany(Card::class, 'cards_user', 'card_id', 'user_id')->using(CardUser::class);
+    }
 }
