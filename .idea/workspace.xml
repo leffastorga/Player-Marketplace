@@ -20,34 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed315161-3f49-4c89-86a4-bb074b4f1a99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CardAttributeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CreditUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Card.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/CardAttribute.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/CardUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/CreditUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ScheduledBuys.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/TransactionBuys.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/CardFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_08_073842_create_cards_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_08_073855_create_cards_attribute_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_08_073902_create_cards_user_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_08_073912_create_credit_user_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_08_073923_create_scheduled_buys_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_08_075755_create_transaction_buys_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/modal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/marketplace.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/player-marketplace.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/player-marketplace.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/nocredit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/showcard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CreditUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CreditUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/marketplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/marketplace.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,9 +152,6 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
-      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
-      <path value="$PROJECT_DIR$/vendor/livewire-ui/modal" />
-      <path value="$PROJECT_DIR$/vendor/livewire-ui/livewire-ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1tXDBKuIIdqEKoGbJqB1nfHEZVX" />
@@ -186,6 +165,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -202,7 +186,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622906404867</updated>
       <workItem from="1622906406303" duration="823000" />
-      <workItem from="1622907428175" duration="20525000" />
+      <workItem from="1622907428175" duration="31704000" />
     </task>
     <task id="LOCAL-00001" summary="first commit :)">
       <created>1622907888970</created>
@@ -211,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622907888971</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="progress">
+      <created>1623273112203</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623273112203</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +221,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit :)" />
+    <MESSAGE value="progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="progress" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623245269529">
@@ -253,14 +245,14 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1622907308408" />
-    <state x="539" y="366" key="NewPhpFileDialog" timestamp="1623258347460">
+    <state x="539" y="366" key="NewPhpFileDialog" timestamp="1623305573369">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state x="539" y="366" key="NewPhpFileDialog/0.23.1440.826@0.23.1440.826" timestamp="1623258347460" />
-    <state x="503" y="145" key="RollbackChangesDialog" timestamp="1623236761015">
+    <state x="539" y="366" key="NewPhpFileDialog/0.23.1440.826@0.23.1440.826" timestamp="1623305573369" />
+    <state x="503" y="145" key="RollbackChangesDialog" timestamp="1623272985564">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state x="503" y="145" key="RollbackChangesDialog/0.23.1440.826@0.23.1440.826" timestamp="1623236761015" />
+    <state x="503" y="145" key="RollbackChangesDialog/0.23.1440.826@0.23.1440.826" timestamp="1623272985564" />
     <state x="320" y="163" key="Vcs.Push.Dialog.v2" timestamp="1622907899781">
       <screen x="0" y="23" width="1440" height="826" />
     </state>

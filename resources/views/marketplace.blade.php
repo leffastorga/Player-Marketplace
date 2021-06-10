@@ -30,10 +30,10 @@
                         @else
                             <span class="text-xs font-medium ml-1 text-indigo-500">Marketplace</span>
                         @endif
-
                     </a>
                 </div>
                 <span class="flex items-center h-8 bg-indigo-200 text-indigo-600 text-sm px-2 rounded">€{{ $card->price }}</span>
+                <a href="{{ route('player', $card) }}" class="inline-flex items-center px-4 py-2 border">See more</a>
             </div>
         </div>
     @endforeach

@@ -42,6 +42,10 @@ class User extends Authenticatable
     ];
 
     public function cards(){
-        return $this->belongsToMany(Card::class, 'cards_user', 'card_id', 'user_id')->using(CardUser::class);
+        return $this->belongsToMany(Card::class, 'cards_user', 'user_id', 'card_id')->using(CardUser::class);
+    }
+
+    public function credit(){
+        return $this->hasOne(CreditUser::class,'user_id','id');
     }
 }

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Card;
 use App\Models\User;
+use App\Http\Controllers\BuysController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,11 +21,22 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard', ['cards' => User::find(Auth::id())->with('cards')->get()]);
+    $user = User::find(Auth::id());
+    return view('dashboard', ['cards' => $user->cards]);
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/marketplace', function () {
     return view('marketplace', ['cards' => Card::with('users')->with('attributes')->get()]);
 })->middleware(['auth'])->name('marketplace');
+
+Route::get('/player/{card}', function(Card $card){
+    return view('showcard', ['card' => $card]);
+})->middleware(['auth', 'creditzero'])->name('player');
+
+Route::get('/nocredit', function () {
+    return view('nocredit');
+})->middleware(['auth'])->name('nocredit');
+
+Route::get('buys/purchase/{card}',[ BuysController::class, 'buyCard' ])->name('buys/purchase/');
 
 require __DIR__.'/auth.php';
