@@ -26,4 +26,5 @@ class Card extends Model
     public function attributes(){
         return $this->hasMany(CardAttribute::class,'card_id','id');
     }
+
 }

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Models\Card;
 use App\Models\User;
@@ -43,7 +44,22 @@ Route::get('/my-account', function () {
     return view('myaccount', ['user' => $user]);
 })->middleware(['auth'])->name('my-account');
 
+Route::get('/random', function () {
+    $card = new Card;
+    $user = User::find(Auth::id());
+    $credit = $user->credit['credit'];
+    $cards = $card->doesntHave('users')->get()->random(3);
+    return view('random', [
+        'cards' => $cards,
+        'credit'=>$credit,
+        'totalPrice' => $cards->sum('price')]);
+})->middleware(['auth', 'creditzero'])->name('random');
+
 Route::get('buys/purchase/{card}',[ BuysController::class, 'buyCard' ])->name('buys/purchase/');
+Route::post('buys/purchase/random/',[ BuysController::class, 'buyRandomCards' ])->name('buys/purchase/random/');
+Route::post('buys/purchase/scheduled/',[ BuysController::class, 'scheduledPurchase' ])->name('buys/purchase/scheduled/');
 Route::put('credituser/{id}', [ CreditUserController::class, 'updateCredit' ])->name('credituser');
+
+
 
 require __DIR__.'/auth.php';
