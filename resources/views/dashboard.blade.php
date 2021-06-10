@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     @if (count($cards) == 0)
-                        You haven't cards yet. Check out our Marketplace!
+                        You haven't cards yet. Check out our <a class="underline text-gray-600 hover:text-gray-900" href="{{ route('marketplace') }}">Marketplace</a>!
                     @else
                         You have bought {{ count($cards) }} cards!
                     @endif

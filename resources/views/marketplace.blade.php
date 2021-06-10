@@ -28,7 +28,7 @@
                         @if(count($card->users) !== 0)
                            <span class="text-xs font-medium ml-1 text-indigo-500">{{ $card->users[0]->name }}</span>
                         @else
-                            <span class="text-xs font-medium ml-1 text-indigo-500">Marketplace</span>
+                            <span class="text-xs font-medium ml-1 text-indigo-500">Bank of Cards</span>
                         @endif
                     </a>
                 </div>

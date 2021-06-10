@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     You haven't sufficient credit to continue buying.
-                    Please click here to load credit to your account.
+                    Please <a class="underline text-gray-600 hover:text-gray-900" href="{{ route('my-account') }}">click here</a> to load credit to your account.
                 </div>
             </div>
         </div>

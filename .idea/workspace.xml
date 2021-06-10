@@ -20,16 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed315161-3f49-4c89-86a4-bb074b4f1a99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/nocredit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/showcard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/myaccount.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/CreditUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CreditUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BuysController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BuysController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CreditUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CreditUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/marketplace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/marketplace.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nocredit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nocredit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/showcard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/showcard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622906404867</updated>
       <workItem from="1622906406303" duration="823000" />
-      <workItem from="1622907428175" duration="31704000" />
+      <workItem from="1622907428175" duration="37782000" />
     </task>
     <task id="LOCAL-00001" summary="first commit :)">
       <created>1622907888970</created>
@@ -202,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623273112203</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="progress">
+      <created>1623306434647</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623306434647</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,10 +231,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="progress" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="458" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623245269529">
+    <state x="458" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623308851324">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state x="458" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.826@0.23.1440.826" timestamp="1623245269529" />
+    <state x="458" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.826@0.23.1440.826" timestamp="1623308851324" />
     <state width="1398" height="213" key="GridCell.Tab.0.bottom" timestamp="1622907308409">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
@@ -245,10 +251,10 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1622907308408" />
-    <state x="539" y="366" key="NewPhpFileDialog" timestamp="1623305573369">
+    <state x="539" y="366" key="NewPhpFileDialog" timestamp="1623306488173">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state x="539" y="366" key="NewPhpFileDialog/0.23.1440.826@0.23.1440.826" timestamp="1623305573369" />
+    <state x="539" y="366" key="NewPhpFileDialog/0.23.1440.826@0.23.1440.826" timestamp="1623306488173" />
     <state x="503" y="145" key="RollbackChangesDialog" timestamp="1623272985564">
       <screen x="0" y="23" width="1440" height="826" />
     </state>

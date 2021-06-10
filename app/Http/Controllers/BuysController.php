@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\CardUser;
 use App\Models\CreditUser;
-use Illuminate\Http\Request;
 use App\Models\TransactionBuys;
 use App\Models\Card;
 use App\Models\User;
