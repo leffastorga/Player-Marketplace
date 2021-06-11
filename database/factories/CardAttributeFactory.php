@@ -2,17 +2,18 @@
 
 namespace Database\Factories;
 
+use App\Models\CardAttribute;
 use App\Models\Card;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CardFactory extends Factory
+class CardAttributeFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Card::class;
+    protected $model = CardAttribute::class;
 
     /**
      * Define the model's default state.
@@ -22,9 +23,8 @@ class CardFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'description' => $this->faker->paragraph(1),
-            'price' => $this->faker->randomDigitNot(0)
+            'attribute_type' => 'image',
+            'attribute_value' => $this->faker->imageUrl(340,256),
         ];
     }
 }

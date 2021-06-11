@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Card;
+use App\Models\CardAttribute;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,9 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
         Card::factory()
             ->count(50)
+            ->hasAttributes(1)
             ->create();
 
     }

@@ -45,43 +45,48 @@
             @endforeach
         </div>
         <br />
-        @if(count($card->users) > 0)
-            @if(Auth::user()->id !== $card->users[0]->id)
-                <a href="{{ route('buys/purchase/', $card) }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-4">Buy now!</a>
+        @if(count($card->schedules) == 0)
+            @if(count($card->users) > 0)
+                @if(Auth::user()->id !== $card->users[0]->id)
+                    <a href="{{ route('buys/purchase/', $card) }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-4">Buy now!</a>
+                    <a id="btnSchedule" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-4">Scheduled purchase</a>
+                    <form method="POST" action="schedules/buys}">
+                        @csrf
+                        @method('POST')
+                    <br/>
+                    <div style="display: none;" id="dvSchedule">
+                        <input type="date" id="dateTransaction" name="dateTransaction" />
+                        <p>All scheduled purchases are executed on the selected day at 06:00.</p>
+                        <br />
+                        <x-button class="ml-4">
+                            {{ __('Purchase!') }}
+                        </x-button>
+
+                    </div>
+                    </form>
+                @endif
+            @else
+                <a href="{{ route('buys/purchase/', $card) }}" class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-4">Buy now!</a>
                 <a id="btnSchedule" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-4">Scheduled purchase</a>
-                <form method="POST" action="schedules/buys}">
+                <form method="POST" action="{{ route('buys/purchase/scheduled/')}}">
                     @csrf
                     @method('POST')
-                <br/>
-                <div style="display: none;" id="dvSchedule">
-                    <input type="date" id="dateTransaction" name="dateTransaction" />
-                    <p>All scheduled purchases are executed on the selected day at 06:00.</p>
-                    <br />
-                    <x-button class="ml-4">
-                        {{ __('Purchase!') }}
-                    </x-button>
+                    <br/>
+                    <div style="display: none;" id="dvSchedule">
+                        <input type="date" id="dateTransaction" name="dateTransaction" />
+                        <input type="hidden" id="card" name="card" value="{{ $card->id }}" />
+                        <p>All scheduled purchases are executed on the selected day at 06:00.</p>
+                        <br />
+                        <x-button class="ml-4 bg-blue-800">
+                            {{ __('Purchase!') }}
+                        </x-button>
 
-                </div>
+                    </div>
                 </form>
             @endif
         @else
-            <a href="{{ route('buys/purchase/', $card) }}" class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-4">Buy now!</a>
-            <a id="btnSchedule" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-4">Scheduled purchase</a>
-            <form method="POST" action="{{ route('buys/purchase/scheduled/')}}">
-                @csrf
-                @method('POST')
-                <br/>
-                <div style="display: none;" id="dvSchedule">
-                    <input type="date" id="dateTransaction" name="dateTransaction" />
-                    <input type="hidden" id="card" name="card" value="{{ $card->id }}" />
-                    <p>All scheduled purchases are executed on the selected day at 06:00.</p>
-                    <br />
-                    <x-button class="ml-4 bg-blue-800">
-                        {{ __('Purchase!') }}
-                    </x-button>
-
-                </div>
-            </form>
+            <p>This card has been reserved by another user.</p>
+            <strong>Soon you will be able to counter-bid in this situation.</strong>
         @endif
     </div>
 </x-app-layout>

@@ -27,4 +27,7 @@ class Card extends Model
         return $this->hasMany(CardAttribute::class,'card_id','id');
     }
 
+    public function schedules(){
+        return $this->hasMany(ScheduledBuys::class,'card_id','id');
+    }
 }
