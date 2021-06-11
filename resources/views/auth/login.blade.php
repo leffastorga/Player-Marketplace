@@ -1,9 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+            <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
         </x-slot>
 
         <!-- Session Status -->

@@ -24,12 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ed315161-3f49-4c89-86a4-bb074b4f1a99" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Card.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Card.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/CardAttribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CardAttribute.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CardFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CardFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/showcard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/showcard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/application-logo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/application-logo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +183,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622906404867</updated>
       <workItem from="1622906406303" duration="823000" />
-      <workItem from="1622907428175" duration="61736000" />
+      <workItem from="1622907428175" duration="62529000" />
     </task>
     <task id="LOCAL-00001" summary="first commit :)">
       <created>1622907888970</created>
@@ -223,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623364384883</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="factories">
+      <created>1623370643826</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623370643826</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +248,8 @@
     <MESSAGE value="first commit :)" />
     <MESSAGE value="progress" />
     <MESSAGE value="schedulesss" />
-    <option name="LAST_COMMIT_MESSAGE" value="schedulesss" />
+    <MESSAGE value="factories" />
+    <option name="LAST_COMMIT_MESSAGE" value="factories" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623363195094">
